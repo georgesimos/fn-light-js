@@ -40,7 +40,7 @@ extraNumbers(3, 8, 11); // 62
 ### FUNCTIONS
 
 ```js
-function tuble(x, y) {
+function tuple(x, y) {
   return [x + 1, y - 1];
 }
 
@@ -49,3 +49,5 @@ var [a, b] = tuple(...[5, 10]);
 a; //6
 b; //9
 ```
+
+So Function is the semantic relationship between input and computed output
