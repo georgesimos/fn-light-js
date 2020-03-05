@@ -1,11 +1,15 @@
-#Functional Light JS
+# Functional Light JS
 
 Functional programming in JavaScript by Kyle Simpson.
+
+---
 
 ## Imperative Vs Declerative Code
 
 Imperative describes the code most of us probably already write naturally; it's focused on precisely instructing the computer **how to do something**.
 Declarative code -- the kind we'll be learning to write, which adheres to FP principles -- is code that's more focused **on describing the what outcome.**
+
+[Read More](https://github.com/getify/Functional-Light-JS/blob/master/manuscript/ch1.md)
 
 ## What is a Function?
 
@@ -51,3 +55,63 @@ b; //9
 ```
 
 So Function is the semantic relationship between input and computed output
+
+```js
+// The name of the function tell us the semantic relationship.
+function shippingRate(size, weight, speed) {
+  return (size + 1) * weight + speed;
+}
+```
+
+### Side Effects
+
+```js
+function shippingRate(size, weight, speed) {
+  (size + 1) * weight + speed;
+}
+
+var rate,
+  size = 12,
+  weight = 4,
+  speed = 5;
+
+shippingRate();
+rate; //57
+
+size = 8;
+speed = 6;
+shippingRate();
+rate; //42
+```
+
+Side effects are both side causes, side indirect input and side indirect output.
+
+> Avoid (Minimize) side effects with function calls... if possible.
+
+```js
+function shippingRate(size, weight, speed) {
+  return (size + 1) * weight + speed;
+}
+var rate;
+rate = shippingRate(12, 4, 5); // 57
+rate = shippingRate(8, 4, 6); // 42
+```
+
+> By passing a direct input that returning a direct output and that's a function.
+
+#### Side Effects :
+
+- I/O (console, files, etc)
+- Database Storage
+- Network Calls
+- DOM
+- Timestamps
+- Random Numbers
+- CPU Heat
+- CPU Time Delay
+
+> No such thing as "no side effects"
+> Avoid them where possible,
+> make them obvious otherwise.
+
+[Read More](https://github.com/getify/Functional-Light-JS/blob/master/manuscript/ch2.md/#chapter-2-the-nature-of-functions)
