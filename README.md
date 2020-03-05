@@ -131,3 +131,15 @@ function addAnother(x, y) {
   return addTwo(x, y) + z; // what is z???
 }
 ```
+
+```js
+// Reducing Surface Area
+// Better readability and more confidence.
+function addAnother(z) {
+  return function addTwo(x, y) {
+    return x + y + z;
+  };
+}
+
+addAnother(1)(20, 21); // 42
+```
