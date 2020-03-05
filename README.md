@@ -63,6 +63,8 @@ function shippingRate(size, weight, speed) {
 }
 ```
 
+[Read More](https://github.com/getify/Functional-Light-JS/blob/master/manuscript/ch2.md/#chapter-2-the-nature-of-functions)
+
 ### Side Effects
 
 ```js
@@ -114,4 +116,18 @@ rate = shippingRate(8, 4, 6); // 42
 > Avoid them where possible,
 > make them obvious otherwise.
 
-[Read More](https://github.com/getify/Functional-Light-JS/blob/master/manuscript/ch2.md/#chapter-2-the-nature-of-functions)
+### Pure Functions
+
+A function with no side causes/effects is called a pure function. A pure function is idempotent in the programming sense, because it cannot have any side effects. Consider:
+
+```js
+// pure
+function addTwo(x, y) {
+  return x + y;
+}
+
+// impure
+function addAnother(x, y) {
+  return addTwo(x, y) + z; // what is z???
+}
+```
