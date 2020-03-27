@@ -34,9 +34,6 @@ function sortStudentsByID() {
 
 // *************************************
 
-// modify/move this function
-
-// modify/move this function
 function getStudentsByID(list) {
   let originalList = list;
   students = [...list];
