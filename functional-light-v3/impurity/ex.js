@@ -8,10 +8,9 @@ var students = [
   { id: 491, name: "Ally" }
 ];
 
-function getStudentsByName(list) {
-  let students = [...list];
-  sortStudentsByName();
-  return students;
+function getStudentsByName(students) {
+  students = [...students];
+  return sortStudentsByName();
 
   function sortStudentsByName() {
     // Don't modify this function
@@ -34,13 +33,12 @@ function sortStudentsByID() {
 
 // *************************************
 
-function getStudentsByID(list) {
-  let originalList = list;
-  students = [...list];
-  sortStudentsByID();
-  list = students;
-  students = originalList;
-  return list;
+function getStudentsByID(curStudents) {
+  let originalStudents = curStudents;
+  students = [...curStudents];
+  const newStudents = sortStudentsByID();
+  students = originalStudents;
+  return newStudents;
 }
 
 // *************************************
