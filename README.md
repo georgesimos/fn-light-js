@@ -157,3 +157,22 @@ function functionName(parameters) {
 
 functionName(arguments); // Invoking a JavaScript Function named functionName with some arguments
 ```
+
+### Closure
+
+Closure is when a function **remembers** the variables around it even when that function is executed elsewhere.
+
+```js
+function makeCounter() {
+  var counter = 0;
+  return function increment() {
+    return ++counter;
+  };
+}
+
+var c = makeCounter();
+
+c(); // 1
+c(); // 2
+c(); // 3
+```
