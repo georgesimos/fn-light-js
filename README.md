@@ -143,3 +143,17 @@ function addAnother(z) {
 
 addAnother(1)(20, 21); // 42
 ```
+
+### Arguments vs Parameters
+
+- Function parameters are variables (names listed) in a function definition.
+
+- Function arguments are the real values passed to (and received by) the function.
+
+```js
+function functionName(parameters) {
+  // code to be executed
+}
+
+functionName(arguments); // Invoking a JavaScript Function named functionName with some arguments
+```
