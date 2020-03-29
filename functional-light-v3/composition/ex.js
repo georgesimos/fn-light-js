@@ -13,9 +13,13 @@ function half(x) {
   return x / 2;
 }
 
+// const compose = (...fns) => pipe(...fns.reverse())
 function compose(...fns) {
   return pipe(...fns.reverse());
 }
+
+// const pipe = (fn, ...fns) => (...args) =>
+//   fns.reduce((acc, fn) => fn(acc), fn(...args));
 function pipe(...fns) {
   return function piped(v) {
     for (let fn of fns) {
